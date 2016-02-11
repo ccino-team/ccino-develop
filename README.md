@@ -1,7 +1,5 @@
 # ccino-develop
 
-# seinosuke sakai
-# naoyoshi kaneko
-# pipipi
-# popipi
-# pepepe
+### member
+###### seinosuke sakai
+###### naoyoshi kaneko
