@@ -395,7 +395,7 @@ footer {
 
 #main-img {
 	margin: 0;
-    width: 1980px;
+    min-width: 100%;
     min-height: 100%;
     text-align: left;
 	overflow: hidden;
@@ -415,63 +415,4 @@ footer {
 
 
 
-.dropdown, .dropup {
-    position: relative;
-}
-
-.btn-primary {
-    color: #fff;
-    background-color: #337ab7;
-    border-color: #2e6da4;
-}
-
-.btn {
-    display: inline-block;
-    padding: 6px 12px;
-    left:80%;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.42857143;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-}
-
-.open>.dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 40%;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
-}
 

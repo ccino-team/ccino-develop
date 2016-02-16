@@ -71,16 +71,27 @@
                 <h1>充電できるカフェをお探しなら</h1>
                 <p>お近くの電源(コンセント)のあるカフェを検索します。</p>
             </div>
-            <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">現在地周辺
-                   <span class="caret"></span>
-                </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">東京都</a></li>
-                        <li><a href="#">神奈川県</a></li>
-                        <li><a href="#">埼玉県</a></li>
-                    </ul>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="col-md-9">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="search" class="form-control" list="area-list" placeholder="現在地周辺から">
+                                <datalist id="area-list">
+                                    <option value="東京都"></option>
+                                    <option value="神奈川県"></option>
+                                    <option value="埼玉県"></option>
+                                </datalist>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-default" style="background-color: #EED20A; border-color: #E4C800; padding-left:32px; padding-right:32px;">検索</button>
+                    </div>
                 </div>
+                <div class="col-md-4"></div>
+            </div>
         </div>
     </header>
 </body>
