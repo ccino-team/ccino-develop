@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .navbar-default {
-    border-color: rgba(20,30,34,0.12);
+    border-color: transparent;
     font-family: 'Helvetica Neue',Arial,sans-serif;
     background-color: #141E22;
     -webkit-transition: all .4s;
@@ -114,7 +114,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media(min-width:768px) {
     .navbar-default {
-        border-color: rgba(20,30,34,0.12);
+        border-color: transparent;
         background-color: transparent;
         min-height: 80px;
     }
@@ -173,7 +173,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @media(min-width:320px) {
     .navbar-default {
-        border-color: rgba(20,30,34,0.12);
+        border-color: transparent;
         background-color: transparent;
         min-height: 80px;
     }
@@ -230,8 +230,9 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
-header {
-    position: absolute;
+.header {
+    float: fixed;
+    position: relative;
     min-height: auto;
     text-align: center;
     color: #fff;
@@ -243,15 +244,15 @@ header {
     -o-background-size: cover;
 }
 
-header .header-content {
-    position: absolute;
+.header .header-content {
+    position: fixed;
     width: 100%;
     padding: 100px 15px;
     text-align: center;
     z-index: 2;
 }
 
-header .header-content .inner h1 {
+.header .header-content .inner h1 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 40px;
@@ -262,7 +263,7 @@ header .header-content .inner h1 {
 }
 
 
-header .header-content .inner p{
+.header .header-content .inner p{
     margin-bottom: 50px;
     font-size: 16px;
     font-family: 'Helvetica Neue',Arial,sans-serif;
@@ -273,18 +274,16 @@ header .header-content .inner p{
 
 
 
-footer {
-    background-color:#ffffff;
-}
 
 @media(min-width:768px) {
 
-	header {
+	.header {
         min-height: 100%;
+        float: left;
     }
 
-    header .header-content {
-        position: absolute;
+    .header .header-content {
+        position: fixed;
         top: 50%;
         padding: 0 50px;
         -webkit-transform: translateY(-50%);
@@ -292,28 +291,25 @@ footer {
         transform: translateY(-50%);
     }
 
-    header .header-content .inner {
+    .header .header-content .inner {
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
     }
 
-    header .header-content .inner h1 {
+    .header .header-content .inner h1 {
         font-size: 40px;
-         margin-bottom: 20px;
+        margin-bottom: 20px;
     }
 
-    header .header-content .inner p{
+    .header .header-content .inner p{
         margin-right: auto;
         margin-left: auto;
         max-width: 80%;
         font-size: 16px;
     }
     
-    section {
-        min-height: 600px;
-        padding: 100px 0;
-    }
+   
     #main-img {
         margin: 0;
         width: 768px;
@@ -322,7 +318,7 @@ footer {
         overflow: hidden;
         top: 0;
         left: 0;
-        position: absolute;
+        position: fixed;
     }
 
     #main-img img {
@@ -330,18 +326,19 @@ footer {
         height: 100%;
         top: 0;
         left: 0;
-        position: absolute;
+        position: fixed;
     }
 }
 
 @media(min-width:320px) {
 
-    header {
+    .header {
         min-height: 100%;
+        float: left;
     }
 
-    header .header-content {
-        position: absolute;
+    .header .header-content {
+        position: fixed;
         top: 50%;
         padding: 0 50px;
         -webkit-transform: translateY(-50%);
@@ -349,28 +346,25 @@ footer {
         transform: translateY(-50%);
     }
 
-    header .header-content .inner {
+    .header .header-content .inner {
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
     }
 
-    header .header-content .inner h1 {
+    .header .header-content .inner h1 {
         font-size: 36px;
          margin-bottom: 20px;
     }
 
-    header .header-content .inner p{
+    .header .header-content .inner p{
         margin-right: auto;
         margin-left: auto;
         max-width: 80%;
         font-size: 16px;
     }
     
-    section {
-        min-height: 600px;
-        padding: 100px 0;
-    }
+  
     #main-img {
         margin: 0;
         width: 320px;
@@ -379,7 +373,7 @@ footer {
         overflow: hidden;
         top: 0;
         left: 0;
-        position: absolute;
+        position: fixed;
     }
 
     #main-img img {
@@ -387,7 +381,7 @@ footer {
         height: 100%;
         top: 0;
         left: 0;
-        position: absolute;
+        position: fixed;
     }
 }
 
@@ -401,7 +395,7 @@ footer {
 	overflow: hidden;
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
 }
 
 #main-img img {
@@ -409,10 +403,55 @@ footer {
     height: 100%;
 	top: 0;
 	left: 0;
-	position: absolute;
+	position: fixed;
+}
+
+s
+.clear {
+    clear:both;
 }
 
 
+.wrap {
+  min-height: 100%;
+  height: auto;
+  /* フッターの高さ分だけ、ネガティブインデントを指定 */
+  margin: 0 auto -40px;
+  /* フッターの高さ分だけ、パディングを指定 */
+  padding: 0 0 40px;
+}
 
+
+.footer-menu ul{
+    list-style: none; 
+    padding:0;
+    margin:0;
+    text-align: center;
+}
+.footer-menu li{
+    padding: 0; 
+    margin-left: 12px;
+    margin-right: 4px;
+    margin-top: 12px;
+    float: left;
+}
+.footer-menu li a{
+    display: block;
+    border-bottom: 0px;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: left;
+    font-size: 10px;
+    font-family: 'Helvetica Neue',Arial,sans-serif;
+}
+
+.footer-menu h6 {
+    margin-top: 16px;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: 'Kefa',Arial,sans-serif;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
 
 
