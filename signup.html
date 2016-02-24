@@ -21,20 +21,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
 	<script src="js/jquery-1.12.0.min.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            var setImg = '#main-img';
-            var fadeSpeed = 2400;
-            var switchDelay = 2400;  
-        
-            $(setImg).children('img').css({opacity:'0'});
-            // $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed); 
-
-            setInterval(function(){
-            $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
-            },switchDelay);
-        });
-    </script>
+      
 </head>
 <body>
     <div class="header">
